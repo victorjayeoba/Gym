@@ -1,0 +1,97 @@
+:root{
+    --width: 90%;
+
+}
+*{
+    line-height:1em;
+}
+
+#Coaches{
+    padding-top: 3rem;
+    position: relative;
+    min-height: 100vmin;
+}
+
+.coaches_wrapper{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 5%;
+    width: var(--width);
+    margin: auto;
+    overflow: visible;
+    border-radius: 8px;
+}
+.coach_container{
+   background-color: var(--tertiary_color);
+   overflow: hidden;
+   border-radius: 8px;
+}
+.coach_container:hover{
+   box-shadow:0 0 5px var(--secondary-color);
+}
+.txt_center > *{
+    font-family: var(--secondar_font_family);
+}
+.coach_image_container{
+    min-height: fit-content;
+}
+.coach_image_container > img{
+    display: block;
+    max-width: 100%;
+   
+}
+section >h2{
+    font-size: 2.5rem;
+
+}
+.coach_name_wrapper{
+    position: relative;
+    padding-left: 1em;
+    padding-bottom: .5em;
+}
+.coach_name_wrapper::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    border-radius: 2px;
+    background-color: var(--secondary-color);
+}
+.coach_name_wrapper h3{
+    display: inline-block;
+    margin:0;
+    margin-top: 1rem;
+}
+coach_name_wrapper > p{
+    margin-top: -1.5em;
+    line-height: 1em;
+}
+.coach_testimonials{
+    display: inline-flex;
+    gap: 1.5rem;
+    padding-left: 5%;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+.coach_testimonial > span{
+    font-weight: 700;
+    font-size: 2.5rem;
+   
+}
+@media(max-width:500px){
+    :root{
+      font-size: 14px!important;
+    }
+
+}
+
+@media(max-width:800px){
+    :root{
+      font-size: 16px;
+    }
+
+}

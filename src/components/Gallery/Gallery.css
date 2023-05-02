@@ -1,0 +1,117 @@
+#gallery{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+#gallery >h2, #gallery> p{
+    text-align: center;
+}
+.main_overlay{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color:rgba(0,0,0,0.5);
+  z-index: 100;
+
+}
+.main_overlay> div{
+  max-height: 90vmin;
+}
+.main_overlay> div >img{
+  display: block;
+  object-fit: contain;
+  max-height: 90vmin;
+  max-width: 80vw;
+}
+.main_overlay:hover{
+  cursor: zoom-out;
+}
+.close_overlay:hover{
+  cursor: pointer;
+}
+.gallery_wrapper{
+    column-count: 3;
+    column-gap: 2rem;
+    margin: auto;
+    width: 80%;
+    margin-top: 1.5rem;
+   
+}
+.gallery_wrapper> div{
+    margin-bottom: 2rem;
+    position: relative;
+   height: auto;
+    transition: .3s linear;
+    background-color: rgba(0,0,0,0.5);
+    overflow: hidden;
+    overflow: visible;
+} 
+
+
+.gallery_wrapper> div > *{
+  display: block!important;
+    width: 100%;
+    margin: 0!important;
+    padding: 0!important;
+}
+.gallery_wrapper> div >:hover{
+  cursor: zoom-in;
+}
+.image_description_overlay{
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  justify-content: center;
+
+  background-color: rgba(0,0,0,0.4);
+  top: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0;
+  transition: .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.image_description_overlay>*{
+position: absolute;
+  bottom: 2px;
+  margin: auto;
+  padding: 0px 5px;
+  transition: .5s;
+  font-size: .8rem;
+
+}
+.gallery_wrapper> div:hover{
+  box-shadow: 0 0 5px var(--secondary-color);
+}
+.gallery_wrapper> div:hover .image_description_overlay{
+  visibility: visible;
+  opacity: 1;
+}
+.gallery_wrapper> div:hover span{
+  bottom: 5px;
+}
+@media(max-width:1000px){
+    :root{
+      font-size: 18px;
+    }
+    .gallery_wrapper{
+      column-count: 2;
+      
+    }
+  }
+.main_overlay .controls{
+  padding:0 5%;
+  margin: auto;
+}
+  @media(max-width:680px){
+    :root{
+      font-size: 16px;
+    }
+    .gallery_wrapper{
+      column-count: 1;
+      
+    }
+}

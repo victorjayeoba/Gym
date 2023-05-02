@@ -1,0 +1,80 @@
+#contact{
+    width: 75%;
+    margin: auto;
+    overflow: hidden;
+}
+section >.flex{
+   justify-content: space-between;
+   align-items: flex-start;
+   gap: 2rem;
+}
+.contact_details *{
+    line-height: 1.5rem;
+}
+section >.flex > div> div{
+display:flex;
+align-items: center;
+
+gap: 0.5em;
+}
+.newsletter h3{
+    padding-top: 0;
+    margin: 0;
+}
+
+form input{
+    padding: .5em 1.2em;
+    outline: none;
+    border: none;
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    background-color: #fffefe57;
+    border: 1px solid var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+form input:focus{
+    border: 1px solid var(--secondary-color);
+}
+form button{
+    color: var(--bg-Color);
+    background-color: var(--secondary-color);
+    padding: .3em 1.2em;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    border-radius: 2px;
+    transition: .3s;
+    border: 1px solid var(--secondary-color);
+    background-color: rgba(255, 255, 255, 0.692);
+  color: var(--bg-Color);
+  cursor: pointer;
+}
+form div:has(small){
+    margin-bottom: 1rem;
+}
+form button:hover{
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+ 
+}
+.success_subscribe{
+ padding: .3em .8em;
+ background-color: rgba(53, 184, 49, 0.452);
+ color: var(--primary-color);
+ border-radius: 5px;
+}
+
+@media(max-width:786px){
+    section >.flex {
+   flex-direction: column;
+ }
+}
+
+@media(max-width:400px){
+ :root{
+    font-size: 14px!important;
+ }
+}

@@ -1,0 +1,10 @@
+footer{
+    display: grid;
+    place-content: center;
+    padding: 2rem;
+    display: block;
+    width: 100%;
+    background-color: var(--tertiary_color);
+    text-align: center;
+ 
+}

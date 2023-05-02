@@ -1,0 +1,49 @@
+.header{
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--secondary-color);
+    background-image: linear-gradient(to top, var(--bg-Color),var(--secondary-color)),url(../../assets/images/hero_image/hero_image.jpg);
+    background-position: center;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.header_content_wrapper{
+    position: relative;
+    z-index: 5;
+}
+.big_font{
+    font-family: 'Oswald', sans-serif;
+    color: red;
+}
+.main_text_wrapper > span{
+ font-family: var(--secondary_font_family);
+ line-height: 1.5;
+ text-align: center;
+}
+.middle_text{
+    position: relative;
+    z-index: 5;
+}
+.animated_bg_text{
+    background-color: transparent;
+    gap: 4em;
+    position: fixed;
+    top: 50%;
+    z-index: -99;
+
+}
+.animated_bg_text >div >span{
+   font-size: 5rem;
+   font-family: var(--secondary_font_family);
+   letter-spacing: .1em;
+   white-space: nowrap;
+   opacity: .08;
+   pointer-events: none;
+   user-select: none;
+   --webkit-user-select:none;
+   z-index: -99;
+}
+

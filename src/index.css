@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,600;1,700;1,900&display=swap');
+
+*,*::after,*::before{
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  color: var(--primary-color) ;
+
+}
+
+:root{
+  font-size: 19px;
+  --bg-Color:  rgba(5, 3, 3, 0.836);
+  --medium-font: 1.5rem:
+  --medium-weight: 700px;
+  --primary-color: #ffffff;
+  --secondary-color: rgba(0, 255, 242, 0.753);
+  --tertiary_color: rgba(13, 139, 108, 0.812);
+  --big-font: 3rem;
+  --secondary_font_family: 'Oswald', sans-serif;
+}
+.big_font{
+  font-size: var(--big-font);
+}
+.secondary_font_family {
+  font-family: var(--secondary_font_family);
+}
+.loader{
+  width: 100px;
+  height: 100px;
+ border:5px solid rgb(4, 125, 224);
+ border-left:  5px solid transparent ;
+ border-bottom: 5px solid transparent;
+ border-radius: 50%;
+  position: fixed;
+  top: calc(50% - 50px);
+  left: calc(50% -  50px);
+ 
+ animation: spinner 2s infinite  ;
+}
+@keyframes spinner{
+  30%{
+    border-left:  5px solid rgb(4, 125, 224) ;
+  }
+  60%{
+    border-bottom:  5px solid rgb(4, 125, 224) ;
+  }
+  80%{
+    transform: rotate(360deg);
+  }
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color:var(--bg-Color);
+  min-height: 100vh;
+  max-width: 100vw;
+ 
+  position: relative;
+  
+  max-width: 100vw;
+}
+
+.flex{
+  display: flex;
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+.txt_center{
+  text-align: center;
+}
+.txt_stroke{
+  color: transparent;
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: var(--secondary-color);
+}
+
+.btn{
+  padding: .6em .8em;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+  transition: .6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.hero_btn{
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+.btn_wrapper{
+  gap: 1rem;
+}
+.btn:hover{
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+.hero_btn:hover{
+  background-color: transparent;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+section{
+  padding: 5%;
+  max-width: 100vw;
+}
+h2,h1{
+  font-size: 1.7rem;
+  margin: 1em;
+
+}
+h2,h3,blockquote,.txt_stroke{
+  font-family:var(--secondary_font_family);
+}
+section >p{
+  margin-bottom: 3em;
+}
+
+@media(max-width:900px){
+ 
+  nav ul{
+        display: block;
+       align-items: flex-start!important;
+  }
+  
+}
